@@ -1,0 +1,33 @@
+---
+layout: blog
+title: Stats
+active_tab: stats
+command: "cat stats.json"
+permalink: /stats/
+---
+
+<div class="stats-section">
+  <h2>📊 server_stats</h2>
+
+  <div class="stats-card">
+    <div class="stats-row">
+      <span class="stats-row__label">Uptime</span>
+      <span class="stats-row__value--green">99.9%</span>
+    </div>
+    <div class="stats-row">
+      <span class="stats-row__label">Posts totais</span>
+      <span>{{ site.posts | size }}</span>
+    </div>
+    <div class="stats-row">
+      <span class="stats-row__label">Cafés consumidos</span>
+      <span class="stats-row__value--yellow">1.337</span>
+    </div>
+
+    <div class="stats-bandwidth">
+      <p class="stats-bandwidth__label">// uso de banda</p>
+      <div class="stats-bandwidth__bar">
+        <div class="stats-bandwidth__fill"></div>
+      </div>
+    </div>
+  </div>
+</div>

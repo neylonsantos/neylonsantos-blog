@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+
+<!-- Anti-FOUC: aplica tema antes do render -->
+<script>
+  (function() {
+    var t = localStorage.getItem('theme') || 'dev';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+
+<!-- Fonte monospace -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- CSS base (tokens de tema compartilhados) -->
+<link rel="stylesheet" href="/assets/css/base.css">
+
+<!-- CSS específico por seção -->
+{% if page.layout == 'blog' or page.layout == 'post' %}
+  <link rel="stylesheet" href="/assets/css/blog.css">
+{% endif %}
+
+{% seo %}

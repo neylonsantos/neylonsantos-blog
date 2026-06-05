@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="blog-page">
+  <div class="blog-container">
+    {% include blog/nav.html %}
+    {% if page.layout == 'post' %}
+      {% capture cmd %}cat {{ page.slug }}.md{% endcapture %}
+      {% include blog/prompt.html command=cmd %}
+    {% else %}
+      {% include blog/prompt.html command=page.command %}
+    {% endif %}
+    <main class="blog-main">
+      {{ content }}
+    </main>
+    {% include blog/footer.html %}
+  </div>
+</div>

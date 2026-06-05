@@ -1,0 +1,31 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0.5'
+          bundler-cache: true
+
+      - name: Build Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server:     ${{ secrets.FTP_SERVER }}
+          username:   ${{ secrets.FTP_USER }}
+          password:   ${{ secrets.FTP_PASSWORD }}
+          local-dir:  ./_site/
+          server-dir: /httpdocs/

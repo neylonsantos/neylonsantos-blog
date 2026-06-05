@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dev">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {{ content }}
+  <script type="importmap">
+    {
+      "imports": {
+        "@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus@3.2.2/dist/stimulus.js"
+      }
+    }
+  </script>
+  <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>

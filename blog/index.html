@@ -1,0 +1,37 @@
+---
+layout: blog
+title: Posts
+active_tab: posts
+command: "ls -la posts/"
+permalink: /
+---
+
+<p class="blog-prompt__subtitle">
+  // <span>{{ site.posts | size }}</span> artigos publicados. você está explorando os arquivos.
+</p>
+
+<div class="posts-list">
+  {% for post in site.posts %}
+  <div class="post-card">
+
+    <div class="post-card__meta">
+      <span>📅</span>
+      <span class="post-card__date">{{ post.date | date: "%A, %d de %B de %Y" }}</span>
+      <span class="post-card__views">* {{ post.views | default: 0 }} views</span>
+    </div>
+
+    <div class="post-card__body">
+      <div class="post-card__info">
+        <h2 class="post-card__title color-{{ post.color | default: 'green' }}">
+          <span>{{ post.icon }}</span>
+          {{ post.title }}
+        </h2>
+        <p class="post-card__excerpt">// {{ post.excerpt }}</p>
+      </div>
+      <span class="post-card__category">[{{ post.category }}]</span>
+    </div>
+
+    <a href="{{ post.url }}" class="post-card__cta">&gt; ler conteúdo...</a>
+  </div>
+  {% endfor %}
+</div>

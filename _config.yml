@@ -1,0 +1,28 @@
+title: Neylon Santos
+description: Cristão, desenvolvedor, audiofilo, tentando viver a vida de forma minimalista.
+url: https://blog.neylon.dev
+baseurl: ""
+
+author:
+  name: Neylon Santos
+  email: hello@neylon.dev
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

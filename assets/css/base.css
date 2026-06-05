@@ -1,0 +1,61 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root,
+[data-theme="dev"] {
+  --bg:            #000000;
+  --bg-card:       #111827;
+  --bg-subtle:     #030712;
+  --text:          #d1d5db;
+  --text-muted:    #6b7280;
+  --text-faint:    #374151;
+  --accent:        #4ade80;
+  --accent-blue:   #60a5fa;
+  --accent-yellow: #facc15;
+  --accent-purple: #c084fc;
+  --border:        #1f2937;
+  --font:          'JetBrains Mono', 'Fira Code', monospace;
+}
+
+[data-theme="human"] {
+  --bg:            #faf9f6;
+  --bg-card:       #ede8e0;
+  --bg-subtle:     #e5dfd6;
+  --text:          #1f2937;
+  --text-muted:    #4b5563;
+  --text-faint:    #6b7280;
+  --accent:        #b45309;
+  --accent-blue:   #1d4ed8;
+  --accent-yellow: #a16207;
+  --accent-purple: #6d28d9;
+  --border:        #c5bdb2;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Shared prompt colors */
+.prompt-user { color: var(--accent); }
+.prompt-at   { color: var(--text-muted); }
+.prompt-host { color: var(--accent-blue); }
+.prompt-cmd  { color: var(--text); margin-left: 0.5rem; }
+
+/* Shared category colors */
+.color-blue   { color: var(--accent-blue); }
+.color-yellow { color: var(--accent-yellow); }
+.color-purple { color: var(--accent-purple); }
+.color-green  { color: var(--accent); }

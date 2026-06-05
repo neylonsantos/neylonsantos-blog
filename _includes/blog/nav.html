@@ -1,0 +1,21 @@
+<nav class="blog-nav" data-controller="theme">
+  <div class="blog-nav__tabs">
+    <a href="/"
+       class="blog-nav__tab{% if page.active_tab == 'posts' %} blog-nav__tab--active{% endif %}">
+      posts
+    </a>
+    <a href="/sobre/"
+       class="blog-nav__tab{% if page.active_tab == 'about' %} blog-nav__tab--active{% endif %}">
+      sobre
+    </a>
+    <a href="/stats/"
+       class="blog-nav__tab{% if page.active_tab == 'stats' %} blog-nav__tab--active{% endif %}">
+      stats
+    </a>
+  </div>
+  <button class="blog-toggle"
+          data-action="click->theme#toggle"
+          data-theme-target="label">
+    modo humano
+  </button>
+</nav>
