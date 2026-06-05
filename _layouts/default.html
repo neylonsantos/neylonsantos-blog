@@ -5,6 +5,12 @@
 </head>
 <body>
   {{ content }}
+
+  {% if jekyll.environment == "production" %}
+  <script data-goatcounter="https://blog-neylon-dev.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
+
   <script type="importmap">
     {
       "imports": {
