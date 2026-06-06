@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Posts
+title: Blog
 active_tab: posts
 command: "ls -la posts/"
 permalink: /
@@ -16,7 +16,7 @@ permalink: /
 
     <div class="post-card__meta">
       <span>📅</span>
-      <span class="post-card__date">{{ post.date | date: "%A, %d de %B de %Y" }}</span>
+      <span class="post-card__date">{{ post.date | ptbr_date_complete }}</span>
       <span class="post-card__views"
             data-controller="views"
             data-views-path-value="{{ post.url }}">* — views</span>
