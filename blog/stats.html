@@ -7,7 +7,7 @@ permalink: /stats/
 ---
 
 <div class="stats-section">
-  <h2>📊 server_stats</h2>
+  <h2>server_stats</h2>
 
   <div class="stats-card">
     <div class="stats-row">
@@ -23,12 +23,11 @@ permalink: /stats/
       <span class="stats-row__value--yellow"
             data-controller="views"
             data-views-path-value="TOTAL">* — views</span>
-
     </div>
 
     <div class="stats-bandwidth">
       <p class="stats-bandwidth__label">// uso de banda</p>
-      <div class="stats-bandwidth__bar">
+      <div class="stats-bandwidth__bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
         <div class="stats-bandwidth__fill"></div>
       </div>
     </div>

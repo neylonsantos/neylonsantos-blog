@@ -1,24 +1,23 @@
 ---
 layout: blog
 ---
+
 <article class="post-article">
   <a href="/" class="post-back">&lt; voltar_para_lista</a>
 
   <header class="post-header">
+    <div class="post-meta">
+      <span class="comment">// {{ page.date | ptbr_date_complete }}</span>
+      <span class="tag">[{{ page.category }}]</span>
+    </div>
     <h1 class="post-title color-{{ page.color }}">
       {{ page.icon }} {{ page.title }}
     </h1>
-    <div class="post-meta">
-      <span>// Data: {{ page.date | date: "%A, %d de %B de %Y" }}</span>
-      <span>// Categoria: {{ page.category }}</span>
-    </div>
   </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+  <div class="post-content">{{ content }}</div>
 
   <footer class="post-end">
-    [ fim do arquivo ]
+    <span class="tag">[ fim do arquivo ]</span>
   </footer>
 </article>

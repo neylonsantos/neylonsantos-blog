@@ -1,19 +1,28 @@
-<nav class="blog-nav" data-controller="theme">
-  <div class="blog-nav__tabs">
-    <a href="/"
-       class="blog-nav__tab{% if page.active_tab == 'posts' %} blog-nav__tab--active{% endif %}">
-      posts
-    </a>
-    <a href="/sobre/"
-       class="blog-nav__tab{% if page.active_tab == 'about' %} blog-nav__tab--active{% endif %}">
-      sobre
-    </a>
-    <a href="/stats/"
-       class="blog-nav__tab{% if page.active_tab == 'stats' %} blog-nav__tab--active{% endif %}">
-      stats
-    </a>
-  </div>
-  <button class="blog-toggle"
+<nav class="topbar" data-controller="theme">
+  <ul class="topbar-links">
+    <li>
+      <a href="/"
+         class="topbar-link{% if page.active_tab == 'posts' %} topbar-link--active{% endif %}"
+         {% if page.active_tab == 'posts' %}aria-current="page"{% endif %}>
+        posts
+      </a>
+    </li>
+    <li>
+      <a href="/sobre/"
+         class="topbar-link{% if page.active_tab == 'about' %} topbar-link--active{% endif %}"
+         {% if page.active_tab == 'about' %}aria-current="page"{% endif %}>
+        sobre
+      </a>
+    </li>
+    <li>
+      <a href="/stats/"
+         class="topbar-link{% if page.active_tab == 'stats' %} topbar-link--active{% endif %}"
+         {% if page.active_tab == 'stats' %}aria-current="page"{% endif %}>
+        stats
+      </a>
+    </li>
+  </ul>
+  <button class="btn btn-ghost"
           data-action="click->theme#toggle"
           data-theme-target="label">
     modo humano

@@ -6,34 +6,27 @@ command: "ls -la posts/"
 permalink: /
 ---
 
-<p class="blog-prompt__subtitle">
-  // <span>{{ site.posts | size }}</span> artigos publicados. você está explorando os arquivos.
-</p>
+<p class="comment">// <span>{{ site.posts | size }}</span> artigos publicados. você está explorando os arquivos.</p>
 
-<div class="posts-list">
+<section class="post-list" aria-label="Lista de artigos">
   {% for post in site.posts %}
-  <div class="post-card">
-
-    <div class="post-card__meta">
-      <span>📅</span>
-      <span class="post-card__date">{{ post.date | ptbr_date_complete }}</span>
-      <span class="post-card__views"
-            data-controller="views"
-            data-views-path-value="{{ post.url }}">* — views</span>
-    </div>
-
-    <div class="post-card__body">
-      <div class="post-card__info">
-        <h2 class="post-card__title color-{{ post.color | default: 'green' }}">
-          <span>{{ post.icon }}</span>
-          {{ post.title }}
+  <article class="post-item">
+    <a href="{{ post.url }}" class="post-link">
+      <span class="post-indicator" aria-hidden="true">&gt;</span>
+      <div class="post-content-wrap">
+        <h2 class="post-list-title color-{{ post.color | default: 'green' }}">
+          {% if post.icon %}<span aria-hidden="true">{{ post.icon }}</span> {% endif %}{{ post.title }}
         </h2>
-        <p class="post-card__excerpt">// {{ post.excerpt }}</p>
+        <div class="post-meta">
+          <span class="comment">// {{ post.date | ptbr_date_complete }}</span>
+          <span class="post-views"
+                data-controller="views"
+                data-views-path-value="{{ post.url }}">* — views</span>
+          <span class="tag">[{{ post.category }}]</span>
+        </div>
+        <p class="post-excerpt">{{ post.excerpt }}</p>
       </div>
-      <span class="post-card__category">[{{ post.category }}]</span>
-    </div>
-
-    <a href="{{ post.url }}" class="post-card__cta">&gt; ler conteúdo...</a>
-  </div>
+    </a>
+  </article>
   {% endfor %}
-</div>
+</section>
