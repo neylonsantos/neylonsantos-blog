@@ -1,14 +1,9 @@
 {
-  "name": "Neylon Santos",
-  "short_name": "Neylon Santos",
+  "name": "Neylon Dev // Blog",
+  "short_name": "Blog Neylon",
   "icons": [
     {
-      "src": "/assets/images/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/images/android-chrome-512x512.png",
+      "src": "/assets/images/avatar-circle-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
