@@ -1,0 +1,12 @@
+{
+  "name": "neylon-blog-og",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "generate-og": "node scripts/generate-og.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.0",
+    "gray-matter": "^4.0.3"
+  }
+}

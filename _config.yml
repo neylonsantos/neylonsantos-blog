@@ -21,8 +21,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+lang: pt-BR
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
   - .github
+  - package.json
+  - package-lock.json
+  - node_modules
+  - scripts

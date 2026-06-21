@@ -26,6 +26,15 @@ jobs:
             exit 1
           fi
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências Node
+        run: npm install
+
       - name: Build Jekyll
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
@@ -34,6 +43,12 @@ jobs:
             exit 1
           fi
           echo "Build concluído com sucesso"
+
+      - name: Instalar fonte JetBrains Mono
+        run: sudo apt-get install -y fonts-jetbrains-mono || true
+
+      - name: Gerar OG images
+        run: node scripts/generate-og.mjs
 
       - name: Compactar site
         run: tar -czf site.tar.gz -C _site .
