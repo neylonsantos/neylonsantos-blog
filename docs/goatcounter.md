@@ -29,7 +29,7 @@ As duas partes são desacopladas: o tracking funciona sem a exibição e vice-ve
 ### O script
 
 ```html
-<script data-goatcounter="https://blog-neylon-dev.goatcounter.com/count"
+<script data-goatcounter="https://neylonsantos-blog.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 ```
 
@@ -41,7 +41,7 @@ Em `_layouts/default.html`, antes do `</body>`, **dentro de um guard de produç�
 
 ```html
   {% if jekyll.environment == "production" %}
-  <script data-goatcounter="https://blog-neylon-dev.goatcounter.com/count"
+  <script data-goatcounter="https://neylonsantos-blog.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   {% endif %}
 
@@ -62,7 +62,7 @@ Sem ele, toda visita no `localhost:4000` durante o desenvolvimento seria contabi
 Para cada path, o GoatCounter expõe um endpoint público:
 
 ```
-GET https://blog-neylon-dev.goatcounter.com/counter/PATH.json
+GET https://neylonsantos-blog.goatcounter.com/counter/PATH.json
 ```
 
 O PATH é o caminho da URL do post, ex: `/2026/04/06/configurando-neovim/`
@@ -85,7 +85,7 @@ export default class extends Controller {
   static values = { path: String }
 
   async connect() {
-    const endpoint = "https://blog-neylon-dev.goatcounter.com/counter";
+    const endpoint = "https://neylonsantos-blog.goatcounter.com/counter";
     const url = `${endpoint}/${encodeURIComponent(this.pathValue)}.json`;
 
     try {
