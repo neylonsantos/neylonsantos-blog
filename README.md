@@ -1,4 +1,4 @@
-# blog.neylon.dev
+# neylonsantos.com/blog
 
 Blog pessoal em Jekyll com tema terminal. Toggle dev/humano para alternar entre dark e light mode.
 

@@ -5,7 +5,7 @@ baseurl: "/blog"
 
 author:
   name: Neylon Santos
-  email: hello@neylon.dev
+  email: hello@neylonsantos.com
 
 permalink: /:year/:month/:day/:title/
 

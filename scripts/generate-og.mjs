@@ -79,7 +79,7 @@ function slugFromFile(filename) {
 
 function buildSVG({ title, dateStr, category, color, isDefault = false }) {
   const titleColor  = COLOR_MAP[color] || T.textPrimary
-  const titleLines  = isDefault ? ['neylon.dev'] : wrapTitle(title)
+  const titleLines  = isDefault ? ['neylonsantos.com'] : wrapTitle(title)
   const promptCmd   = isDefault
     ? '$ ls -la posts/'
     : `$ cat "${x(title.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 36))}.md"`
@@ -130,7 +130,7 @@ function buildSVG({ title, dateStr, category, color, isDefault = false }) {
   <text x="${TITLE_X}" y="118"
         font-family="JetBrains Mono, Fira Code, Courier New, monospace"
         font-size="20">
-    <tspan fill="${T.accent}">visitante</tspan><tspan fill="${T.textTertiary}">@</tspan><tspan fill="${T.link}">neylon.dev</tspan><tspan fill="${T.textSecondary}"> ${promptCmd}</tspan>
+    <tspan fill="${T.accent}">visitante</tspan><tspan fill="${T.textTertiary}">@</tspan><tspan fill="${T.link}">neylonsantos.com</tspan><tspan fill="${T.textSecondary}"> ${promptCmd}</tspan>
   </text>
 
   <!-- divider -->
@@ -146,7 +146,7 @@ function buildSVG({ title, dateStr, category, color, isDefault = false }) {
   <!-- footer domain -->
   <text x="${TITLE_X}" y="562"
         font-family="JetBrains Mono, Fira Code, Courier New, monospace"
-        font-size="17" fill="${T.textMuted}">neylon.dev</text>
+        font-size="17" fill="${T.textMuted}">neylonsantos.com</text>
 
   <!-- status dot -->
   <circle cx="1106" cy="556" r="7"  fill="${T.accent}"/>
