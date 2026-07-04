@@ -73,8 +73,8 @@ jobs:
           script: |
             set -e
 
-            TARGET_DIR="/var/www/vhosts/neylon.dev/blog.neylon.dev/httpdocs"
-            BACKUP_BASE_DIR="/var/www/vhosts/neylon.dev/blog.neylon.dev/site_backups"
+            TARGET_DIR="/var/www/vhosts/neylonsantos.com/httpdocs/blog"
+            BACKUP_BASE_DIR="/var/www/vhosts/neylonsantos.com/blog_site_backups"
             BACKUP_DIR="${BACKUP_BASE_DIR}/backup_$(date +%Y%m%d_%H%M%S)"
 
             echo "Iniciando deploy em ${TARGET_DIR}..."

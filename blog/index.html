@@ -11,7 +11,7 @@ permalink: /
 <section class="post-list" aria-label="Lista de artigos">
   {% for post in site.posts %}
   <article class="post-item">
-    <a href="{{ post.url }}" class="post-link">
+    <a href="{{ post.url | relative_url }}" class="post-link">
       <div class="post-content-wrap">
         <div class="post-title-row">
           <span class="post-indicator" aria-hidden="true">&gt;</span>
@@ -23,7 +23,7 @@ permalink: /
           <span class="comment">// {{ post.date | ptbr_date_complete }}</span>
           <span class="post-views"
                 data-controller="views"
-                data-views-path-value="{{ post.url }}">* — views</span>
+                data-views-path-value="{{ post.url | relative_url }}">* — views</span>
           <span class="tag">[{{ post.category }}]</span>
         </div>
         <p class="post-excerpt">{{ post.excerpt }}</p>

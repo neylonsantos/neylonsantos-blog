@@ -1,26 +1,26 @@
 <nav class="topbar" data-controller="theme">
   <ul class="topbar-links">
     <li>
-      <a href="http://neylon.dev" class="topbar-link" rel="noopener">
+      <a href="https://neylonsantos.com" class="topbar-link" rel="noopener">
         ~/
       </a>
     </li>
     <li>
-      <a href="/"
+      <a href="{{ '/' | relative_url }}"
          class="topbar-link{% if page.active_tab == 'posts' %} topbar-link--active{% endif %}"
          {% if page.active_tab == 'posts' %}aria-current="page"{% endif %}>
         posts
       </a>
     </li>
     <li>
-      <a href="/sobre/"
+      <a href="{{ '/sobre/' | relative_url }}"
          class="topbar-link{% if page.active_tab == 'about' %} topbar-link--active{% endif %}"
          {% if page.active_tab == 'about' %}aria-current="page"{% endif %}>
         sobre
       </a>
     </li>
     <li>
-      <a href="/stats/"
+      <a href="{{ '/stats/' | relative_url }}"
          class="topbar-link{% if page.active_tab == 'stats' %} topbar-link--active{% endif %}"
          {% if page.active_tab == 'stats' %}aria-current="page"{% endif %}>
         stats

@@ -21,23 +21,24 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Design tokens (globais — todas as páginas) -->
-<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="{{ '/assets/css/tokens.css' | relative_url }}">
 
 <!-- Reset + base (globais) -->
-<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
 
 <!-- Componentes (apenas blog e posts) -->
 {% if page.layout == 'blog' or page.layout == 'post' %}
-  <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
 {% endif %}
 
 <!-- OG image (deve vir antes do seo tag para twitter:card ter prioridade) -->
 {% if page.layout == 'post' %}
   {% assign og_slug = page.date | date: "%Y-%m-%d" | append: "-" | append: page.slug %}
-  {% assign og_image_url = site.url | append: "/assets/og/" | append: og_slug | append: ".png" %}
+  {% assign og_image_path = "/assets/og/" | append: og_slug | append: ".png" %}
+  {% assign og_image_url = og_image_path | absolute_url %}
   {% assign og_image_alt = page.title | append: " — " | append: site.title %}
 {% else %}
-  {% assign og_image_url = site.url | append: "/assets/og/default.png" %}
+  {% assign og_image_url = "/assets/og/default.png" | absolute_url %}
   {% assign og_image_alt = site.title %}
 {% endif %}
 
