@@ -1,7 +1,7 @@
 title: Neylon Santos
 description: Cristão, desenvolvedor, audiofilo, tentando viver a vida de forma minimalista.
-url: https://blog.neylon.dev
-baseurl: ""
+url: https://neylonsantos.com
+baseurl: "/blog"
 
 author:
   name: Neylon Santos

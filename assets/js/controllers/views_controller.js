@@ -4,7 +4,7 @@ export default class extends Controller {
   static values = { path: String }
 
   async connect() {
-    const endpoint = "https://blog-neylon-dev.goatcounter.com/counter";
+    const endpoint = "https://neylonsantos-blog.goatcounter.com/counter";
     const path = this.pathValue.replace(/\/$/, '');
     const url = `${endpoint}/${path}.json`;
 
